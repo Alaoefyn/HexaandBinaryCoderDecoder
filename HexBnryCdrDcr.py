@@ -12,7 +12,7 @@ def string_to_binary(string_input):
 
 def main():
     while True:
-        user_input = input("Enter 'h' for Hexadecimal, 'b' for Binary and 's' for String Input: ")
+        user_input = input("Enter 'h' for Hexadecimal input, 'b' for Binary input and 's' for String input: ")
         if user_input.lower() == 'h':
             hex_input = input("Enter Hexadecimal Input: ")
             print("Decoded String: ", hex_to_string(hex_input))
@@ -21,14 +21,14 @@ def main():
             print("Decoded String: ", binary_to_string(binary_input))
         elif user_input.lower() == 's':
             string_input = input("Enter String Input: ")
-            sub_input = input("Enter 'h' for Hexadecimal, 'b' for Binary Output: ")
+            sub_input = input("Enter 'h' for Hexadecimal value, 'b' for Binary Output: ")
             if sub_input.lower() == 'h':
                 print("Hexadecimal Output: ", string_to_hex(string_input))
             elif sub_input.lower() == 'b':
                 print("Binary Output: ", string_to_binary(string_input))
         else:
             print("Invalid Input!")
-        cont = input("Do you want to continue? (Y/N): ")
+        cont = input("Do you want to continue to code decode? (Y for YES,N for NO)(Y/N): ")
         if cont.lower() == 'n':
             break
 
